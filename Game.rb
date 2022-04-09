@@ -4,8 +4,8 @@ require './Player'
 class Game
   attr_accessor :player1, :player2, :current_player, :game
   def initialize(players)
-    @player1 = Player.new(players[0])
-    @player2 = Player.new(players[1])
+    @player1 = Player.new(players[0] || 'Player 1')
+    @player2 = Player.new(players[1] || 'Player 2')
     @current_player = @player1
     @game = Turn.new
   end
