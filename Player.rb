@@ -7,6 +7,7 @@ class Player
   end
 
   def minus_life
-    @lives -= 1 if @lives > 0
+    if @lives > 0
+      @lives -= 1 
   end
 end
